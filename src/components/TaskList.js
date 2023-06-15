@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import CircularProgress from "@mui/material/CircularProgress";
 import axios from "axios";
 import TaskForm from "./TaskForm";
 import { useEffect, useState } from "react";
@@ -147,7 +148,7 @@ const TaskList = () => {
         </Box>
       )}
 
-      {/* {isLoading && <CircularProgress />} */}
+      {isLoading && <CircularProgress />}
       {!isLoading && tasks.length === 0 ? (
         <p>No task added. Please add a task</p>
       ) : (
