@@ -148,7 +148,11 @@ const TaskList = () => {
         </Box>
       )}
 
-      {isLoading && <CircularProgress />}
+      {isLoading && (
+        <Box textAlign="center">
+          <CircularProgress />
+        </Box>
+      )}
       {!isLoading && tasks.length === 0 ? (
         <p>No task added. Please add a task</p>
       ) : (
